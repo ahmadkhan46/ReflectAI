@@ -2,6 +2,10 @@
 
 > An enterprise-grade emotional wellness platform that uses local AI to understand your emotional patterns — without ever sending your private thoughts to the cloud.
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?logo=fastapi&logoColor=white)
+
 ---
 
 ## What is ReflectAI?
@@ -368,7 +372,7 @@ reflectai/
 
 ## Licence
 
-MIT — free to use, modify, and distribute.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
