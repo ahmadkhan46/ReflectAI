@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Edit(*)",
+      "Write(*)",
+      "Read(*)",
+      "Bash(.venv/Scripts/python.exe -c \":*)",
+      "Bash(.venv/Scripts/python.exe -m ml.main --config configs/fd002.yaml)",
+      "Bash(.venv/Scripts/python.exe -m ml.main --config configs/fd004.yaml)",
+      "Bash(.venv/Scripts/python.exe scripts/run_digital_twin_demo.py)",
+      "Bash(.venv/Scripts/python.exe -m pip install \"fastapi==0.115.12\" \"uvicorn[standard]==0.34.0\" \"sqlalchemy[asyncio]==2.0.40\" \"aiosqlite==0.20.0\" \"asyncpg==0.30.0\" \"alembic==1.14.1\" \"redis==5.2.1\" \"celery==5.4.0\" \"pydantic-settings==2.8.1\" \"python-jose[cryptography]==3.4.0\" \"passlib[bcrypt]==1.7.4\" \"python-multipart==0.0.20\" \"httpx==0.28.1\" \"pytest==8.3.5\" \"pytest-asyncio==0.25.3\")",
+      "Bash(npm --version)",
+      "Bash(npx create-next-app@latest frontend --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npm install:*)",
+      "Bash(npx next:*)",
+      "Bash(python -m pytest tests/ -q --tb=no --co)",
+      "Bash(pip install:*)",
+      "Bash(python -m pytest tests/ -q --tb=short)",
+      "Bash(.venv/Scripts/python -m pytest tests/ -q --tb=short)",
+      "Bash(.venv/Scripts/python -c \"import email_validator; print\\(''ok''\\)\")",
+      "Bash(C:/Learning/apps/UCC/.venv/Scripts/pip.exe install:*)",
+      "Bash(C:/Learning/apps/UCC/.venv/Scripts/python.exe -c \"import email_validator; print\\(''ok''\\)\")",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(C:/Learning/apps/UCC/.venv/Scripts/python.exe -m pip install email-validator 2>&1)",
+      "Bash(C:/Learning/apps/UCC/.venv/Scripts/python.exe -m pytest tests/ -q --tb=short)",
+      "Bash(C:/Learning/apps/UCC/.venv/Scripts/python.exe -m pip install \"bcrypt<4.0\" -q)",
+      "Bash(gh auth:*)",
+      "Bash(git --version)",
+      "Bash(git -C C:/Learning/apps/UCC log --oneline -3)",
+      "Bash(git config:*)",
+      "Bash(.venv/Scripts/python.exe -m ruff check ml/ api/ --select E,F,W,I --ignore E501)",
+      "Bash(.venv/Scripts/pip.exe install:*)",
+      "Bash(python -m pip install ruff)",
+      "Bash(python -m ruff check ml/ api/ --select E,F,W,I --ignore E501)",
+      "Bash(python -m ruff check ml/ api/ --select E,F,W,I --ignore E501 --fix)",
+      "Bash(python -m ruff check api/services/inference_service.py --select I --fix)",
+      "Bash(python -m pytest tests/ -v --tb=short -q)",
+      "Bash(.venv/Scripts/python.exe -m pytest tests/ -v --tb=short -q)",
+      "mcp__ide__getDiagnostics"
+    ]
+  }
+}

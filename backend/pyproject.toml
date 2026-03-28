@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reflectai-backend"
+version = "0.1.0"
+description = "ReflectAI Mental Health Platform — Backend API"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi[standard]>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "sqlalchemy[asyncio]>=2.0.36",
+    "asyncpg>=0.30.0",
+    "alembic>=1.14.0",
+    "pydantic>=2.10.0",
+    "pydantic-settings>=2.7.0",
+    "pydantic[email]>=2.10.0",
+    "python-jose[cryptography]>=3.3.0",
+    "passlib[bcrypt]>=1.7.4",
+    "bcrypt>=4.0.0,<5.0.0",
+    "python-multipart>=0.0.20",
+    "cryptography>=44.0.0",
+    "redis>=5.2.0",
+    "celery[redis]>=5.4.0",
+    "httpx>=0.28.0",
+    "python-dotenv>=1.0.1",
+    "email-validator>=2.2.0",
+    "slowapi>=0.1.9",
+    "limits[redis]>=3.13.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.25.0",
+    "pytest-cov>=6.0.0",
+    "aiosqlite>=0.20.0",
+    "ruff>=0.8.0",
+    "mypy>=1.13.0",
+]
+ml = [
+    "transformers>=4.47.0",
+    "torch>=2.5.0",
+    "sentence-transformers>=3.0.0",
+    "scikit-learn>=1.5.0",
+    "anthropic>=0.40.0",
+    "openai>=1.50.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "A", "C4", "DTZ", "RET", "SIM"]
+ignore = ["S101", "COM812", "N805"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+addopts = "--cov=app --cov-report=term-missing --cov-fail-under=70"
+
+[tool.coverage.run]
+source = ["app"]
+omit = ["app/celery_app.py", "alembic/*", "app/main.py"]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+exclude = ["alembic*"]
