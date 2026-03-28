@@ -1,10 +1,11 @@
 # ReflectAI — Privacy-First Mental Health Journaling
 
-> An enterprise-grade emotional wellness platform that uses local AI to understand your emotional patterns — without ever sending your private thoughts to the cloud.
-
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?logo=fastapi&logoColor=white)
+
+> An enterprise-grade emotional wellness platform that uses local AI to understand your emotional patterns — without ever sending your private thoughts to the cloud.
+
 
 ---
 
